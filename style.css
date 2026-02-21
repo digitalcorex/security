@@ -1,0 +1,95 @@
+body{
+  background:black;
+  color:#00ff00;
+  font-family:monospace;
+  font-size:22px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  margin:0;
+  overflow:hidden;
+  flex-direction:column;
+  text-align:center;
+}
+
+/* Start Screen */
+#startScreen{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100vw;
+  height:100vh;
+}
+
+#startBtn{
+  padding:15px 40px;
+  font-size:22px;
+  background:#00ff00;
+  color:black;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* Scan Box */
+.scanBox{
+  width:220px;
+  height:30px;
+  border:2px solid #00ff00;
+  margin-top:20px;
+  overflow:hidden;
+}
+
+.scanFill{
+  width:0%;
+  height:100%;
+  background:#00ff00;
+}
+
+.scanPercent{
+  margin-top:10px;
+}
+
+/* Terminal text */
+.line{
+  opacity:1;
+  transition:opacity 0.8s;
+  padding:10px;
+}
+
+.progress{
+  font-size:18px;
+  margin-top:10px;
+}
+
+.fadeBlink{
+  animation:blinkFade 1s infinite;
+  font-size:26px;
+  color:red;
+}
+
+@keyframes blinkFade{
+  0%{opacity:1;}
+  50%{opacity:0;}
+  100%{opacity:1;}
+}
+
+/* Fullscreen GIF */
+#glitchScreen{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  background:black;
+  z-index:9999;
+}
+
+#glitchGif,
+.fullScreenGif{
+  width:100vw;
+  height:100vh;
+  object-fit:cover;
+}
