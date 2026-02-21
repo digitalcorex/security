@@ -1,0 +1,91 @@
+body{
+  background:black;
+  color:#00ff00;
+  font-family:monospace;
+  font-size:22px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  margin:0;
+  overflow:hidden;
+  flex-direction:column;
+  text-align:center;
+}
+
+/* Start Button */
+#startBtn{
+  padding:15px 30px;
+  font-size:20px;
+  background:black;
+  color:#00ff00;
+  border:2px solid #00ff00;
+  cursor:pointer;
+}
+
+#startBtn:hover{
+  background:#00ff00;
+  color:black;
+}
+
+/* Spinner */
+.scannerWhite {
+  width: 80px;
+  height: 80px;
+  border: 6px solid #333;
+  border-top: 6px solid white;
+  border-radius: 50%;
+  margin-top: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.line{
+  padding:10px;
+}
+
+.progress{
+  font-size:18px;
+  margin-top:10px;
+}
+
+.fullGif{
+  width:100vw;
+  height:100vh;
+  object-fit:cover;
+}
+
+.fadeBlink{
+  animation:blinkFade 1s infinite;
+  font-size:26px;
+  color:red;
+}
+
+@keyframes blinkFade{
+  0%{opacity:1;}
+  50%{opacity:0;}
+  100%{opacity:1;}
+}
+
+#glitchScreen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  z-index: 9999;
+}
+
+#glitchGif {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
